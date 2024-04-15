@@ -13,7 +13,10 @@ export default{
 
     <section class="characters">
         <div class="container">
-            <div class="card">
+            <div class="single-card">
+                <CharactersCard></CharactersCard>
+                <CharactersCard></CharactersCard>
+                <CharactersCard></CharactersCard>
                 <CharactersCard></CharactersCard>
                 <CharactersCard></CharactersCard>
                 <CharactersCard></CharactersCard>
@@ -40,15 +43,11 @@ export default{
         background-color: #fff;
         padding: 20px;
 
-        .card{
-        display: flex;
-        flex-wrap: wrap;
+        .single-card{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
     }
-    }
-
-    
 }
-
-
-
 </style>
