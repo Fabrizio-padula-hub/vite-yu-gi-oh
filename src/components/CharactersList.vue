@@ -15,17 +15,6 @@ export default{
         <div class="container">
             <div class="single-card">
                 <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
-                <CharactersCard></CharactersCard>
             </div>
             
         </div>

@@ -28,6 +28,7 @@ export default{
 
     h4{
         margin: 8px 0;
+        color: white;
     }
 
     .subtitle{
