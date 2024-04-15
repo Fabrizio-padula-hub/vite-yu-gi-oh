@@ -1,17 +1,20 @@
 <script>
 export default{
     name: 'CharactersCard',
+    props: {
+        infoCard: Object
+    }
 }
 </script>
 
 <template>
     <div class="card">
         <div>
-            <img src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg" alt="">
+            <img :src="infoCard.card_images[0].image_url_small" :alt="infoCard.name">
         </div>
-        <h4>Prova titolo card</h4>
+        <h4>{{ infoCard.name }}</h4>
         <div class="subtitle">
-            Prova sottotitolo
+            {{ infoCard.archetype }}
         </div>
     </div>
 </template>
