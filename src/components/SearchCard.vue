@@ -1,10 +1,12 @@
 <script>
 import axios from 'axios';
+import { store } from "../store.js";
 
 export default{
     name: 'SearchCard',
     data(){
         return{
+            store,
             archetipoStatus: []
         };
     },
@@ -25,8 +27,11 @@ export default{
 
 <template>
     <div class="container">
-        <select name="" class="app-search">
-            <option v-for="archetipo in archetipoStatus">{{ archetipo.archetype_name }}</option>
+        <select @change="$emit('cardSearchArchetipo')" v-model="store.searchArchetipo" class="app-search">
+            <option value="">Scegli un argomento</option>
+            <option v-for="archetipo in archetipoStatus" value="archetipo.archetype_name">
+                {{ archetipo.archetype_name }}
+            </option>
         </select>
     </div>
 

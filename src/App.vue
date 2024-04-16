@@ -19,7 +19,21 @@ export default {
   },
   methods: {
     getCharactersApi(){
-      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
+      let apiUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php'
+
+      const queryParams = {
+        num: 20,
+        offset: 0,
+        archetype: ''
+      }
+      // if(store.searchArchetipo !== ''){
+      //   queryParams.archetype = store.searchArchetipo;
+      // }
+
+
+      axios.get(apiUrl,{
+        params: queryParams 
+      })
       .then((response) => {
         store.characters = response.data.data;
       });
@@ -38,7 +52,7 @@ export default {
   <AppHeader></AppHeader>
 
   <main>
-    <SearchCard></SearchCard>
+    <SearchCard  @cardSearchArchetipo="getCharactersApi"></SearchCard>
     <CharactersList></CharactersList>
 
   </main>
