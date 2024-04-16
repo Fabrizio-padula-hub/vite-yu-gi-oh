@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { store } from "./store.js";
 import AppHeader from "./components/AppHeader.vue";
+import SearchCard from "./components/SearchCard.vue";
 import CharactersList from "./components/CharactersList.vue";
 
 
@@ -9,6 +10,7 @@ export default {
   components:{
     AppHeader,
     CharactersList,
+    SearchCard
   },
   data() {
     return{
@@ -36,7 +38,7 @@ export default {
   <AppHeader></AppHeader>
 
   <main>
-    
+    <SearchCard></SearchCard>
     <CharactersList></CharactersList>
 
   </main>

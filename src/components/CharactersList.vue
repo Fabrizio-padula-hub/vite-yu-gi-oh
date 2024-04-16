@@ -22,7 +22,6 @@ export default{
             <div class="single-card">
                 <CharactersCard v-for="character in store.characters" :key="character.id" :infoCard="character"></CharactersCard>
             </div>
-            
         </div>
     </section>
 </template>
